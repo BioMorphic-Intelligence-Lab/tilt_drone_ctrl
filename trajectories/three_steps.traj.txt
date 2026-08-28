@@ -1,0 +1,16 @@
+# Three step references for the spherical joint.
+#
+#   t      = time the step starts [s]; held until the next line's time
+#   phi_x  = rotation about the pivot's x axis (roll about the beam)   [deg]
+#   theta_y= rotation about y (beam pitches up/down)                   [deg]
+#   psi_z  = rotation about z (beam swings sideways along the wall)    [deg]
+#
+# Pitch is the expensive axis: nose-up reduces the rotors' effective tilt into
+# the wall, so each step re-solves its own trim and push command. Run with
+#   python scripts/run_sim.py --traj trajectories/three_steps.traj.txt --plot
+#
+#  t     phi_x   theta_y   psi_z
+   0.0     0.0      0.0      0.0
+   2.5     0.0      2.0      5.0
+   5.0    -4.0     -2.0     -5.0
+   7.5     4.0      2.0      5.0

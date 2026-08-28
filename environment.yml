@@ -1,0 +1,10 @@
+name: tilt_drone
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - genesis-world==1.3.3
+      - control
+      - matplotlib
+      - pytest
